@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu Site</title>
+    <title>Atirador Misterioso</title>
     <style>
         body {
-            background-color: #1a1a1a;
+            background-color: #444444;
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
+        }
+        .header {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px; /* Aumenta a largura do contêiner */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
         }
         .image-container {
             display: flex;
@@ -20,13 +36,13 @@
             margin-top: 50px;
         }
         img {
-            width: 30%;
+            width: 50%;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
         .text-next-to-image {
             margin-left: 10px;
-            font-size: 40px;
+            font-size: 24px;
             font-weight: bold;
             color: #ffcc00;
         }
@@ -43,119 +59,95 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin-left: 50%; /* Move o botão 30% para a direita */
-            transform: translateX(-50%); /* Centraliza o botão */
         }
         button:hover {
             background-color: #e6b800;
         }
-    </style>
-</head>
-<body>
-    <div class="image-container">
-        <img src="amber.donw (4).png" alt="Descrição da imagem">
-        <div class="text-next-to-image">Amber Game power</div>
-    </div>
-    
-   <p class="centered-button">
-    <a href="Amber Game Now (4).apk" download>
-        <button>Download</button>
-    </a>
-</p>
-        </a>
-    </p>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel de Imagens</title>
-    <style>
-        body {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left;
         }
-        #carousel-container {
-            width: 410px; /* Largura do carrossel (considerando a borda) */
-            overflow: hidden;
+        .code-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+        .validity-text {
+            font-style: italic;
+            color: #ffcc00;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .carousel-container {
+            width: 80%; /* Largura do carrossel */
             margin: 20px auto; /* Centraliza o carrossel */
             border: 2px solid #ffffff; /* Adiciona borda branca ao redor do carrossel */
             border-radius: 8px; /* Borda arredondada */
+            overflow: hidden;
         }
-        #image-carousel {
+        .image-carousel {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
         .carousel-image {
-            width: 400px; /* Largura da imagem */
-            height: 230px; /* Altura da imagem */
+            width: 100%; /* Largura da imagem */
+            height: auto; /* Altura da imagem */
             margin-right: 10px; /* Espaço entre as imagens */
         }
     </style>
 </head>
 <body>
-   <div id="carousel-container">
-    <div id="image-carousel">
-        <img class="carousel-image" src="amber_donw_1.png" alt="Imagem 1">
-        <img class="carousel-image" src="amber_donw_2.png" alt="Imagem 2">
-        <img class="carousel-image" src="amber_donw_3.png" alt="Imagem 3">
+    <div class="header">
+        <h1>Atirador Misterioso</h1>
     </div>
-</div>
-
+    <div class="container">
+        <div class="image-container">
+            <img src="atirador_misterioso.png" alt="Descrição da imagem">
+            <div class="text-next-to-image">Atirador: Desafio de Vitórias Valiosas!</div>
+        </div>
+        <p>Jogue, desafie e vença em <strong>Atirador: Desafio de Vitórias Valiosas!</strong> onde a diversão se une à emoção de ganhar dinheiro jogando um clássico atemporal. Pegue seu celular, convide seus amigos e comece a jogar hoje mesmo - quem sabe você não será o próximo vencedor a levar para casa uma recompensa valiosa?</p>
+        <div class="centered-button">
+            <a href="AtiradorMisterioso.apk" download>
+                <button>Download</button>
+            </a>
+        </div>
+        <p>Número de downloads: <span id="download-counter">0</span></p>
+        <p>Use o código: <span class="code-text">atirador10</span> e ganhe 10 gemas. Este código é válido para os <span class="validity-text">primeiros 1000 usuários que se cadastrarem a partir de hoje.</span></p>
+    </div>
+    <div class="carousel-container">
+        <div class="image-carousel">
+            <img class="carousel-image" src="atirador_misterioso1.png" alt="Imagem 1">
+            <img class="carousel-image" src="atirador_misterioso2.png" alt="Imagem 2">
+            <img class="carousel-image" src="atirador_misterio3.png" alt="Imagem 3">
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Atirador Misterioso. Todos os direitos reservados.</p>
+    </footer>
     <script>
-        const carousel = document.getElementById('image-carousel');
-        let currentIndex = 0;
+        // Simulação de contador de downloads
+        const counterElement = document.getElementById('download-counter');
+        let downloadCount = 0;
+        const targetDownloadCount = 33000; // Alvo de downloads
 
-        function showImage(index) {
-            const translateValue = -index * (420 + 10) + 'px'; // 450 é a largura da imagem e 10 é o espaço entre as imagens
-            carousel.style.transform = 'translateX(' + translateValue + ')';
+        function updateCounter() {
+            if (downloadCount < targetDownloadCount) {
+                downloadCount += 500;
+                counterElement.textContent = downloadCount.toLocaleString();
+                setTimeout(updateCounter, 100); // Atualiza a cada 0.1 segundo
+            } else {
+                counterElement.textContent = targetDownloadCount.toLocaleString();
+            }
         }
 
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % 3; // 3 é o número total de imagens
-            showImage(currentIndex);
-        }
-
-        setInterval(nextImage, 3000); // Muda automaticamente a cada 3 segundos
+        updateCounter();
     </script>
 </body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photon Game</title>
-    <style>
-        body {
-            text-align: center;
-            margin: 5px;
-            color: grey;
-        }
-    </style>
-</head>
-<body>
-
-   <h1>Amber Game Now</h1>
-    
-<p>Discover the epitome of gaming excellence with Amber Game Now, a standout in the vibrant gaming scene of the Philippines. Immerse yourself in a rich tapestry of games, each a testament to the ingenuity and creativity of Filipino game developers.</p>
-
-<p>From thrilling adventures to mind-bending puzzles, Amber Game Now offers a diverse array of gaming experiences that cater to every taste. Engage with captivating narratives, stunning visuals, and seamless gameplay that define the pinnacle of gaming entertainment.</p>
-
-<p>Join a community of gaming enthusiasts and embark on a journey through the ever-expanding universe of Amber Game Now. Whether you're a casual gamer or a seasoned pro, there's something for everyone in this unparalleled gaming platform.</p>
-</body>
-</html>
-
-<footer>
-  <p style="color: #fff;">© 2024 Amber Game. All rights reserved.</p>
-</footer>
-</body>
-</html>
+                </html>
