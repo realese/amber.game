@@ -100,6 +100,7 @@
             width: 100%; /* Largura da imagem */
             height: auto; /* Altura da imagem */
             margin-right: 10px; /* Espaço entre as imagens */
+            display: none; /* Esconde as imagens por padrão */
         }
     </style>
 </head>
@@ -148,6 +149,22 @@
         }
 
         updateCounter();
+
+        // Script para girar o carrossel de imagens a cada 3 segundos
+        const carouselImages = document.querySelectorAll('.carousel-image'); // Seleciona todas as imagens do carrossel
+        let currentIndex = 0; // Inicia com o índice da primeira imagem
+
+        function rotateCarousel() {
+            // Esconde a imagem atual
+            carouselImages[currentIndex].style.display = 'none';
+            // Calcula o próximo índice circularmente
+            currentIndex = (currentIndex + 1) % carouselImages.length;
+            // Mostra a próxima imagem
+            carouselImages[currentIndex].style.display = 'block';
+        }
+
+        // Chama a função rotateCarousel a cada 3 segundos
+        setInterval(rotateCarousel, 3000);
     </script>
 </body>
-                </html>
+</html>
